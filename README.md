@@ -15,6 +15,7 @@ Focus Reader solves this by displaying **one word at a time** on a **blank scree
 - **Smart Pacing**: Pauses slightly longer on punctuation for natural rhythm
 - **Full Control**: Adjust speed, pause, skip forward/backward with keyboard shortcuts
 
+https://github.com/user-attachments/assets/bb71297f-e8c0-47e9-b435-31c79c88d910
 
 ## Installation
 
