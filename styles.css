@@ -1,0 +1,86 @@
+/* Focus Reader Styles */
+
+#focus-reader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  z-index: 2147483647;
+  /* Max z-index */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  /* simple exit if needed */
+}
+
+#focus-reader-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#focus-reader-word-container {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  min-height: 1.5em;
+  /* Prevent layout shift */
+}
+
+.focus-pivot {
+  color: #ff4757;
+  /* Red pivot point optimal for RSVP */
+}
+
+#focus-reader-controls {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #888;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#focus-reader-overlay:hover #focus-reader-controls {
+  opacity: 1;
+}
+
+.focus-control-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.focus-control-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+#focus-progress-bar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#focus-progress-bar {
+  height: 100%;
+  background: #4ade80;
+  /* Bright Green */
+  width: 0%;
+  transition: width 0.1s linear;
+}

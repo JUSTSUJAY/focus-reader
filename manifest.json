@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Reader",
+  "version": "1.0",
+  "description": "Read faster with RSVP (Rapid Serial Visual Presentation) technology.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ]
+}
